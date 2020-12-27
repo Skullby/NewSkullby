@@ -1,3 +1,9 @@
+Entrega Intermedia: 
+El proyecto es sobre un E-commerce sobre la venta de componentes de computadora. Me base en un diseño que le sirva al usuario para poder navegar 
+facilmente por las categorias. No incluí nada extra por npm.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
