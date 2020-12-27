@@ -1,21 +1,23 @@
-.featuredProducts {
+.categorias {
     padding: 4rem 0;
 }
 
-.featuredProducts h2 {
+.categorias h2 {
     color: black;
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
-.featuredProducts ul {
+.categorias ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
+    
 }
 
-.featuredProducts ul li {
-    width: 20%;
+.categorias ul li {
+    width: 30%;
     list-style-type: none;
+   
 }

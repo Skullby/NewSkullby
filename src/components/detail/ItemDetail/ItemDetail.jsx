@@ -1,4 +1,6 @@
+import ItemCount from '../../global/ItemCount/ItemCount';
 import './ItemDetail.css'; 
+
 
 const ItemDetail = ({item}) => {
     return (
@@ -10,7 +12,7 @@ const ItemDetail = ({item}) => {
             <p1>{item.descripcion}</p1>
             <p>${item.precio}</p>
             <p>Stock: {item.stock}</p>
-            <button>Agregar al carrito</button>
+            <ItemCount/>
             </div>
         </article>
     )

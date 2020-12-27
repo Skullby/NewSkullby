@@ -23,3 +23,14 @@
     cursor: pointer;
     
 }
+
+.cLink {
+  text-decoration: none;
+  background-color: #D3D3D3;
+  border: #D3D3D3 solid 2px;
+  border-radius: 2px;
+  color:black;
+  text-align: center;
+  
+}
+

@@ -1,10 +1,35 @@
-
-import logo from "./logo.svg";
+import {Link, NavLink} from 'react-router-dom';
+import logo from '../../assets/Imagenes/logo.svg';
 import Cart from "../Cart/Cart";
 import './NavBar.css';
+import NavItem from '../NavItem/NavItem';
 
 function NavBar({titulo, action}) {
     // const {titulo} = props;
+
+    const menuItems = [
+        {
+            texto: 'Teclados',
+            ruta: '/category/teclados',
+        },
+        {
+            texto: 'Mouses',
+            ruta: '/category/mouses',
+        },
+        {
+            texto: 'Monitores',
+            ruta: '/category/monitores',
+        },
+        {
+            texto: 'Placas de video',
+            ruta: '/category/placas-de-video',
+        },
+        {
+            texto: 'CPUs',
+            ruta: '/category/cpus',
+        },
+    ]
+
    
     return(
         <>
@@ -12,10 +37,9 @@ function NavBar({titulo, action}) {
             <header>
             
                 <ul className="nav">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Products</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">About</a></li>
+                    <li><Link to={'/'}>Home</Link></li>
+                    <li><a href="">Contactos</a></li>
+                    <li><a href="">Sobre Nosotros</a></li>
                 </ul>
 
                
@@ -23,27 +47,17 @@ function NavBar({titulo, action}) {
         
         
                 <div className="container">
-                <img src={logo}   alt='logo'/>
+                <NavLink to={'/'} activeClassName="img"><img src={logo}   alt='logo'/></NavLink>
                 <h1 >{titulo}</h1>
                 <h2>Tienda E-Commerce</h2>
                 <nav>
+                    
                     <ul>
-                        <li>
-                            <a href="">Teclados</a>
-                        </li>
-                        <li>
-                            <a href="">Mouses</a>
-                        </li>
-                        <li>
-                            <a href="">Monitores</a>
-                        </li>
-                        <li>
-                            <a href="">Placas de video</a>
-                        </li>
-                        <li>
-                            <a href="">CPUs</a>
-                        </li>
+                    {
+                     menuItems.map((seccion, index) => <NavItem key={index} texto={seccion.texto} url={seccion.ruta} />)   
+                    }
                     </ul>
+                    
                 </nav>
                     
                 </div>

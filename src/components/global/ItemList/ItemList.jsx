@@ -1,39 +1,57 @@
 import Items from "../Item/Item";
 import {useState, useEffect} from 'react'; 
+import './ItemList.css';
 
 const ItemList=() => {
     const [items, setItems] = useState([]);
    
     const products = [
         {
-            id: 1,
-            titulo: 'Producto 5',
-            precio: 300,
-            stock: 80,
+            id: 10,
+            nombre: 'RTX 3070',
+            categoria: "placas-de-video",
+            foto:"https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png" ,
+            descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
+            precio: 19.799,
+            stock: 12,
         },
         {
-            id: 2,
-            titulo: 'Producto 6',
-            precio: 150,
-            stock: 55,
-        },
-        {
-            id: 3,
-            titulo: 'Producto 7',
-            precio: 650,
-            stock: 30,
+            id: 11,
+            nombre: 'RTX 3080',
+            categoria: "placas-de-video",
+            foto:"https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png" ,
+            descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
+            precio: 19.799,
+            stock: 12,
         },
         {
             id: 4,
-            titulo: 'Producto 8',
-            precio: 8000,
-            stock: 20,
+            nombre: 'G203 Lightsync Logitech',
+            categoria: "mouses",
+            foto:"https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png" ,
+            descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
+            precio: 300,
+            stock: 34,
         },
         {
-            id: 5,
-            titulo: 'Producto 9',
-            precio: 6000,
-            stock: 15,
+            
+            id: 3,
+            nombre: 'Razer BlackWidow Chroma V2',
+            categoria: "teclados",
+            foto:"https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png" ,
+            descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
+            precio: 500,
+            stock: 40,
+    
+        },
+        {
+            id: 2, 
+            nombre: "Logitech G Pro Gaming",
+            categoria: "teclados",
+            foto: "https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png",
+            descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod.",
+            precio: 6.499,
+            stock: 56,
         }
     ];
    
@@ -64,8 +82,9 @@ const ItemList=() => {
                 {items.map(item => (
                     <li key={item.id}>
                         <Items
-                            titulo={item.titulo}
+                            nombre={item.nombre}
                             precio={item.precio}
+                            itemid={item.id}
                         />
                     </li>
                 ))}

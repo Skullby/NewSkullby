@@ -4,15 +4,20 @@
     box-shadow: 0 0 0.5rem black;
     cursor: pointer;
     transition: box-shadow 0.5s;
+    width: 23vw;
+    height: 89vh;
+    margin-left: -1.3rem;
 }
 
 .productCard:hover {
     box-shadow: 0 0 0.8rem black;
 }
 .productCard img {
-    width: 85%;
-    border-top-left-radius: auto;
-    border-top-right-radius: auto;
+    height: 300px;
+    width: 300px;
+    left: 5rem;
+    top: 1rem; 
+    position: relative;
 }
 
 .productCard div {
@@ -36,4 +41,13 @@
 .stock{
     opacity: 40%;
     font-size:small ;
+}
+
+.boton {
+    text-decoration: none;
+    color: black;
+}
+
+.boton-activo {
+    color: blue;
 }

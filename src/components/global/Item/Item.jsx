@@ -1,22 +1,22 @@
+import { NavLink } from 'react-router-dom'
 import './Item.css'
 
-const Items = ({titulo, precio, stock})  => {
+const Items = ({nombre, precio, itemid})  => {
     
     return (
+     
         <article className="items">
+            <NavLink to={`/item/${itemid}`} className="navLink">
+                <div>
+                    <h3>{nombre}</h3>
+                    <p>${precio}</p>   
+                </div>
+            </NavLink>
+        </article>
        
-        <div>
-            <h3>{titulo}</h3>
-            <p>${precio}</p>
-           
-            
-        
-        </div>
-
-     </article>
-
+       
     );
-}
+}   
 
 
 export default Items; 

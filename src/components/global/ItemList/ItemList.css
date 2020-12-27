@@ -1,4 +1,14 @@
 .itemList {
-    text-align: center;
+    
+    
 }
 
+.itemList div ul {
+
+}
+
+.itemList div ul li {
+    display: inline-table;
+    width: 50rem;
+    height: 10rem;
+}

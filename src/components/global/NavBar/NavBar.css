@@ -4,13 +4,13 @@ header{
 
 }
 
-img {
+.img {
   image-rendering: auto;
   size: 15px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  width: 10%;
+  width: 9%;
   height: 10%;
   padding: 10px 20px;
 }
