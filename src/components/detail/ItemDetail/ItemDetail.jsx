@@ -1,8 +1,16 @@
 import ItemCount from '../../global/ItemCount/ItemCount';
 import './ItemDetail.css'; 
+import { useState } from 'react';
+import { Link } from 'react-router-dom'; 
 
 
 const ItemDetail = ({item}) => {
+    const [showItemCount, setShowItemCount] = useState(true)
+
+    const onAdd = () => {
+        setShowItemCount(false);
+    }
+
     return (
         <article className="itemDetail">
             <h1>{item.nombre}</h1>
@@ -12,7 +20,12 @@ const ItemDetail = ({item}) => {
             <p1>{item.descripcion}</p1>
             <p>${item.precio}</p>
             <p>Stock: {item.stock}</p>
-            <ItemCount/>
+            { showItemCount ? 
+                <ItemCount onAdd={onAdd} /> 
+              :
+                <Link to='/checkout'><button>Termina tu compra</button></Link>
+            }
+            
             </div>
         </article>
     )

@@ -1,16 +1,13 @@
 import {useState} from 'react';
 import "./ItemCount.css";
 
-function ItemCount() {
+function ItemCount({ onAdd }) {
     const [qty, setQty] = useState(1);
 
     const handleClickResta = () => {
         if(qty > 0) {
             setQty(qty - 1);
         }
-    }
-    const onAdd = () => {
-        alert(`Agregaste ${qty} productos al carrito`);
     }
 
     return(

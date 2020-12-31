@@ -7,10 +7,22 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Footer from '../components/global/Footer/Footer';
 import Checkout from '../components/Checkout/Checkout';
 import Category from '../components/Category';
+import { useEffect} from 'react';
+
 
 function App() {
+  const windowResize = (e) => {
+    console.log(e);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', windowResize);
+    return () => {
+      window.removeEventListener('resize', windowResize);
+    }
+  }, [])
+
   
- 
 
    
   return (
