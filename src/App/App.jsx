@@ -7,32 +7,29 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Footer from '../components/global/Footer/Footer';
 import Checkout from '../components/Checkout/Checkout';
 import Category from '../components/Category';
-import { useEffect} from 'react';
-
+import {useState} from 'react';
+import {Store} from '../Contexts/Store'
+import Cart from '../components/Cart/Cart';
 
 function App() {
-  const windowResize = (e) => {
-    console.log(e);
-  }
+  const [data, setData] = useState({
+    cartItems:[],
+    cantTotal:0,
 
-  useEffect(() => {
-    window.addEventListener('resize', windowResize);
-    return () => {
-      window.removeEventListener('resize', windowResize);
-    }
-  }, [])
-
-  
+  });
 
    
-  return (
-    <>
-      <BrowserRouter>
-        <NavAndWidgetCart/>
+  return ( // Envolver a todo con Store.Provider permite a los componentes leer y modificar la data 
+    <Store.Provider value={[data, setData]}>
+     <BrowserRouter>
+      <NavAndWidgetCart/>
 
         <Switch>
           <Route exact path="/">
             <Home/>
+          </Route>
+          <Route path='/cart'>
+            <Cart/>
           </Route>
           <Route path='/checkout'>
             <Checkout/>
@@ -46,11 +43,11 @@ function App() {
           <Route path="*">
             <Error404/>
           </Route>
-        </Switch>
+          </Switch>
 
-        <Footer/>
-      </BrowserRouter>
-    </>
+          <Footer/>
+        </BrowserRouter>
+    </Store.Provider>
   );
 }
 

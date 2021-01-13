@@ -1,4 +1,7 @@
-export const listaProductos = [ {
+
+
+export const listaProductos = [ 
+{
     id: 1, 
     nombre: "Teclado Razer Huntsman Tournament Edition",
     categoria: "teclados",
@@ -6,6 +9,7 @@ export const listaProductos = [ {
     descripcion: "El teclado Razer Huntsman Tournament Edition es un teclado mecánico con interruptores ópticos diseñado para ofrecernos la máxima velocidad a la hora de demostrar nuestras habilidades en todo tipo de torneos de juego. Este teclado monta unos switches ópticos lineales Razer.",
     precio: 16.499,
     stock: 60,
+    itemQty: 1,
 },
 {
     id: 2, 
@@ -15,6 +19,7 @@ export const listaProductos = [ {
     descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod.",
     precio: 6.499,
     stock: 56,
+    itemQty: 1,
 },
 {
     id: 3,
@@ -24,6 +29,7 @@ export const listaProductos = [ {
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 500,
     stock: 40,
+    itemQty: 1,
     
 },
 {
@@ -34,6 +40,7 @@ export const listaProductos = [ {
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 300,
     stock: 34,
+    itemQty: 1,
 },
 {
     id: 5,
@@ -43,6 +50,7 @@ export const listaProductos = [ {
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 600,
     stock: 50,
+    itemQty: 1,
 },
 {
     id: 6,
@@ -52,6 +60,7 @@ export const listaProductos = [ {
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 250,
     stock: 12,
+    itemQty: 1,
 },
 {
     id: 7,
@@ -61,6 +70,7 @@ export const listaProductos = [ {
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 39.999,
     stock: 12,
+    itemQty: 1,
 },
 {
     id: 8,
@@ -70,6 +80,7 @@ export const listaProductos = [ {
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 19.799,
     stock: 12,
+    itemQty: 1,
 },
 {
     id: 9,
@@ -79,6 +90,7 @@ export const listaProductos = [ {
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 58.499,
     stock: 12,
+    itemQty: 1,
 },
 {
     id: 10,
@@ -88,6 +100,7 @@ export const listaProductos = [ {
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 19.799,
     stock: 12,
+    itemQty: 1,
 },
 {
     id: 11,
@@ -97,6 +110,7 @@ export const listaProductos = [ {
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 19.799,
     stock: 12,
+    itemQty: 1,
 },
 {
     id: 12,
@@ -106,6 +120,7 @@ export const listaProductos = [ {
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 19.799,
     stock: 12,
+    itemQty: 1,
 },
 {
     id: 13,
@@ -115,6 +130,7 @@ export const listaProductos = [ {
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 19.799,
     stock: 12,
+    itemQty: 1,
 },
 {
     id: 14,
@@ -124,6 +140,7 @@ export const listaProductos = [ {
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 19.799,
     stock: 12,
+    itemQty: 1,
 },
 {
     id: 15,
@@ -133,6 +150,7 @@ export const listaProductos = [ {
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 19.799,
     stock: 12,
+    itemQty: 1,
 },
 ]
 

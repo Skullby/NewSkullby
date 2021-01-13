@@ -2,11 +2,14 @@ import {useEffect, useState} from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import {useParams} from 'react-router-dom';
 import {listaProductos} from '../../assets/listaProductos'; 
+import { useContext} from 'react'; 
+
 
 const Detail = () => {
     const {itemid} = useParams();
+   
     const [items, setItems] = useState();
-
+    
     
     const getItems = new Promise((resolve, reject) => {
         setTimeout(() => {

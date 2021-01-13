@@ -4,16 +4,16 @@ import './Item.css'
 const Items = ({nombre, precio, itemid})  => {
     
     return (
-     
-        <article className="items">
-            <NavLink to={`/item/${itemid}`} className="navLink">
-                <div>
-                    <h3>{nombre}</h3>
-                    <p>${precio}</p>   
-                </div>
-            </NavLink>
-        </article>
-       
+        <NavLink to={`/item/${itemid}`} className="navLink">
+            <article className="items">
+                
+                    <div>
+                        <h3>{nombre}</h3>
+                        <p>${precio}</p>   
+                    </div>
+                
+            </article>
+        </NavLink>
        
     );
 }   

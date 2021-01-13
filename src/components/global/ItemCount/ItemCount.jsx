@@ -1,14 +1,34 @@
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 import "./ItemCount.css";
+import {Store} from '../../../Contexts/Store';
 
-function ItemCount({ onAdd }) {
+function ItemCount({ onAdd }, {prods}) {
+    const [data, setData] = useContext(Store);
     const [qty, setQty] = useState(1);
+
 
     const handleClickResta = () => {
         if(qty > 0) {
             setQty(qty - 1);
         }
-    }
+    };       
+
+    const onCart = () => {
+        setData({
+            ...data, 
+            cantidad: data.cantidad + qty,
+            items:[...data.items, prods],
+        });
+        
+        
+    };
+
+    
+
+    console.log(data); 
+    
+      
+
 
     return(
         <div>
@@ -25,7 +45,7 @@ function ItemCount({ onAdd }) {
          
          
         </div>
-        <button className='add' onClick={onAdd}>Agregar al Carrito</button>
+        <button className='add' onClick={onCart}>Agregar al Carrito</button>
         </div>
 
     )

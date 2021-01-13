@@ -31,8 +31,11 @@ function Category() {
    
     return productos.length > 0 ? (
         <section className="categorias">
+  
             <ul>
                 {
+                    
+                    
                     productos.map((item, index) => (
                         <li key={index}>
                             <ProductCard 
@@ -44,6 +47,7 @@ function Category() {
                             />
                         </li>
                     ))
+                    
                 }
             </ul>
         </section>

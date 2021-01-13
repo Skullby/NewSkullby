@@ -1,6 +1,7 @@
 import Items from "../Item/Item";
 import {useState, useEffect} from 'react'; 
 import './ItemList.css';
+import {NavLink} from 'react-router-dom';
 
 const ItemList=() => {
     const [items, setItems] = useState([]);
@@ -65,43 +66,50 @@ const ItemList=() => {
     ];
    
    
-    const getPromise = () => new Promise((resolve, reject) => {
+    const getPromise = new Promise((resolve, reject) => {
         setTimeout(() => {
-           resolve(products)
-        }, 2000)
-    });
+            resolve(products);
+        }, 500)
+    })
+    
+    const getProducstFromDB = async () => {
+        try {
+            const result = await getPromise;
+            setItems(result);
+        } catch(error) {
+            alert('No podemos mostrar los productos en este momento');
+        }
+    }
 
     useEffect(() => {
-        getPromise(products).then(rta => setItems(rta));
+       getProducstFromDB();
         // eslint-disable-next-line
     }, []);
         
     
     
-    useEffect(() => {
-        console.log(items);
-        items.map(item => console.log(item));
-    }, [items]);
-
+    
     return (
-    <section className="itemList">
-        <div>
-        {items.length > 0 && (
-            <ul>
-                {items.map(item => (
-                    <li key={item.id}>
-                        <Items
-                            nombre={item.nombre}
-                            precio={item.precio}
-                            itemid={item.id}
-                        />
-                    </li>
-                ))}
-            </ul>
-            )   }
-            {items.length === 0 && <p>Cargando items...</p>}
-        </div>
-    </section>
+        
+            <section className="itemList">
+                <div>
+                {items.length > 0 ? (
+                    <ul>
+                        {items.map(item => (
+                            <li key={item.id}>
+                                <Items
+                                    nombre={item.nombre}
+                                    precio={item.precio}
+                                    itemid={item.id}
+                                />
+                            </li>
+                        ))}
+                    </ul>
+                    ) :  
+                    (<p>Cargando items...</p>)}
+                </div>
+            </section>
+        
         );
 }
 

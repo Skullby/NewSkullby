@@ -1,6 +1,6 @@
 import {Link, NavLink} from 'react-router-dom';
 import logo from '../../assets/Imagenes/logo.svg';
-import Cart from "../Cart/Cart";
+import Cart from "../Cart/NavCart";
 import './NavBar.css';
 import NavItem from '../NavItem/NavItem';
 
