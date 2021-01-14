@@ -13,7 +13,8 @@ const ItemList=() => {
             categoria: "placas-de-video",
             foto:"https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png" ,
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
-            precio: 19.799,
+            precio: 40.999,
+            itemQty: 4,
             stock: 12,
         },
         {
@@ -22,7 +23,8 @@ const ItemList=() => {
             categoria: "placas-de-video",
             foto:"https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png" ,
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
-            precio: 19.799,
+            precio: 60.999,
+            itemQty: 1,
             stock: 12,
         },
         {
@@ -32,6 +34,7 @@ const ItemList=() => {
             foto:"https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png" ,
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
             precio: 300,
+            itemQty: 1,
             stock: 34,
         },
         {
@@ -41,7 +44,8 @@ const ItemList=() => {
             categoria: "teclados",
             foto:"https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png" ,
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
-            precio: 500,
+            precio: 1.299,
+            itemQty: 1,
             stock: 40,
     
         },
@@ -51,7 +55,8 @@ const ItemList=() => {
             categoria: "teclados",
             foto: "https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png",
             descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod.",
-            precio: 6.499,
+            precio: 6.599,
+            itemQty: 1,
             stock: 56,
         },
         {
@@ -60,7 +65,8 @@ const ItemList=() => {
             categoria: "cpus",
             foto:"https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png" ,
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
-            precio: 19.799,
+            precio: 60.999,
+            itemQty: 1,
             stock: 12,
         }
     ];
@@ -85,7 +91,7 @@ const ItemList=() => {
        getProducstFromDB();
         // eslint-disable-next-line
     }, []);
-        
+    
     
     
     

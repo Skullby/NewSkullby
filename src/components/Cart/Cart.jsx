@@ -21,9 +21,11 @@ function Cart() {
     }
 
    
+    
     return (
-        <>
-       
+        <div>
+        {data.cartItems.length > 0 ? (
+            <div>
             <h2>Sus productos:</h2>
 
             {
@@ -31,12 +33,25 @@ function Cart() {
                 <button onClick={removeItem}>Quitar</button></p>) 
             }
 
+            <p>Total: $ {data.cartItems.reduce((a, c) => a + c.precio * c.itemQty, 0)}</p>
+
             <button onClick={removeAllItems} >Quitar todos los productos del Cart</button>
             <NavLink to='/checkout' activeClassName="cLink">Ir al Checkout</NavLink>
+            </div>
+            )
+
+            :   
+            <div>
+                     <h2>No tiene items en el Carrito</h2>
+                     <NavLink to='/'>Volver a la pagina principal</NavLink>
+            </div>
+                     
+        }
+            
             
 
        
-        </>
+        </div>
     )
 }
 

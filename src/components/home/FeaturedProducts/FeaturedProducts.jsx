@@ -10,7 +10,7 @@ const FeaturedProducts = () => {
         categoria: "teclados",
         foto: "https://i.rtings.com/images/reviews/keyboard/razer/huntsman/huntsman-design-medium.jpg",
         descripcion: "El teclado Razer Huntsman Tournament Edition es un teclado mecánico con interruptores ópticos diseñado para ofrecernos la máxima velocidad a la hora de demostrar nuestras habilidades en todo tipo de torneos de juego. Este teclado monta unos switches ópticos lineales Razer.",
-        precio: 16.499,
+        precio: 16.599,
         stock: 60,
     },
     {
@@ -19,7 +19,7 @@ const FeaturedProducts = () => {
         categoria: "teclados",
         foto: "https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png",
         descripcion: "lorem",
-        precio: 6.499,
+        precio: 6.599,
         stock: 56,
     },
     {
@@ -28,7 +28,7 @@ const FeaturedProducts = () => {
         categoria: "teclados",
         foto:"https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png" ,
         descripcion:"" ,
-        precio: 500,
+        precio: 1.299,
         stock: 40,
         
     },
@@ -38,7 +38,7 @@ const FeaturedProducts = () => {
         categoria: "cpus",
         foto:"https://www.morepowerfulnc.org/wp-content/uploads/2018/10/300x300-1.png" ,
         descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
-        precio: 19.799,
+        precio: 30.999,
         stock: 12,
     },
 ]);

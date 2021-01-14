@@ -13,15 +13,16 @@ const CartWidget = ({show, action}) => {
             cartItems:[],
             cantTotal: 0,
         })
-        data.cartItems[data.cartItems.findIndex(i => i.id === data.cartItems.id)].itemQty = 0 
     }
-
 
 
     const removeItem = () => {
-        data.cartItems.splice([data.cartItems.findIndex(i => i.id === data.cartItems.id)])
        
+        setData({
+            cantTotal: data.cantTotal - (data.cartItems[data.cartItems.findIndex(i => i.id === data.cartItems.id)]?.itemQty),
+            cartItems: data.cartItems.splice([data.cartItems.findIndex(i => i.id === data.cartItems.id)])})
     }
+
 
    
 
@@ -42,6 +43,9 @@ const CartWidget = ({show, action}) => {
                 data.cartItems?.map(item => <p>{item.nombre} x {item.itemQty}
                 <button onClick={removeItem}>Quitar</button></p>) 
             }
+
+            <p>Total: $ {data.cartItems.reduce((a, c) => a + c.precio * c.itemQty, 0)}</p>
+
            
             <button onClick={removeAllItems} >Quitar todos los productos del Cart</button>
             <NavLink to='/cart' activeClassName="cLink">Ir al Cart</NavLink>
