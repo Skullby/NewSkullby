@@ -10,6 +10,8 @@ export const listaProductos = [
     precio: 16.599,
     stock: 60,
     itemQty: 1,
+    destacado: true,
+    recomendado: true,
 },
 {
     id: 2, 
@@ -20,6 +22,8 @@ export const listaProductos = [
     precio: 6.599,
     stock: 56,
     itemQty: 1,
+    destacado: false,
+    recomendado: false,
 },
 {
     id: 3,
@@ -30,6 +34,8 @@ export const listaProductos = [
     precio: 1.299,
     stock: 40,
     itemQty: 1,
+    destacado: false,
+    recomendado: false,
     
 },
 {
@@ -41,6 +47,8 @@ export const listaProductos = [
     precio: 300,
     stock: 34,
     itemQty: 1,
+    destacado: true,
+    recomendado: true,
 },
 {
     id: 5,
@@ -51,6 +59,8 @@ export const listaProductos = [
     precio: 600,
     stock: 50,
     itemQty: 1,
+    destacado: false,
+    recomendado: false,
 },
 {
     id: 6,
@@ -61,6 +71,8 @@ export const listaProductos = [
     precio: 250,
     stock: 12,
     itemQty: 1,
+    destacado: false,
+    recomendado: false,
 },
 {
     id: 7,
@@ -71,6 +83,8 @@ export const listaProductos = [
     precio: 39.999,
     stock: 12,
     itemQty: 1,
+    destacado: true,
+    recomendado: true,
 },
 {
     id: 8,
@@ -80,7 +94,9 @@ export const listaProductos = [
     descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis lorem a augue aliquam, vitae vestibulum nunc accumsan. Nam euismod." ,
     precio: 20.999,
     stock: 12,
-    itemQty: 1,
+    itemQty: 1, 
+    destacado: false,
+    recomendado: false,
 },
 {
     id: 9,
@@ -91,6 +107,8 @@ export const listaProductos = [
     precio: 58.999,
     stock: 12,
     itemQty: 1,
+    destacado: false,
+    recomendado: true,
 },
 {
     id: 10,
@@ -101,6 +119,8 @@ export const listaProductos = [
     precio: 40.999,
     stock: 12,
     itemQty: 1,
+    destacado: false,
+    recomendado: false,
 },
 {
     id: 11,
@@ -111,6 +131,8 @@ export const listaProductos = [
     precio: 60.999,
     stock: 12,
     itemQty: 1,
+    destacado: false,
+    recomendado: true,
 },
 {
     id: 12,
@@ -121,6 +143,8 @@ export const listaProductos = [
     precio: 20.999,
     stock: 12,
     itemQty: 1,
+    destacado: false,
+    recomendado: false,
 },
 {
     id: 13,
@@ -131,6 +155,8 @@ export const listaProductos = [
     precio: 30.999,
     stock: 12,
     itemQty: 1,
+    destacado: false,
+    recomendado: true,
 },
 {
     id: 14,
@@ -141,6 +167,8 @@ export const listaProductos = [
     precio: 15.999,
     stock: 12,
     itemQty: 1,
+    destacado: false,
+    recomendado: false,
 },
 {
     id: 15,
@@ -151,6 +179,8 @@ export const listaProductos = [
     precio: 60.999,
     stock: 12,
     itemQty: 1,
+    destacado: true,
+    recomendado: false,
 },
 ]
 

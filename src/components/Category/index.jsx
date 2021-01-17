@@ -1,34 +1,30 @@
 import {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
+import { getFirestore } from '../../db';
 import listaProductos from '../assets/listaProductos';
 import ProductCard from '../global/ProductCard/ProductCard';
 import './index.css'; 
 
 function Category() {
     const [productos, setProductos] = useState([]);
-
     const {category_name} = useParams();
+    const db = getFirestore();
 
     useEffect(() => {
-        console.log(category_name);
-    }, [category_name])
+        if(category_name) {
+            db.collection('productos').where('categoria', '==', category_name).get()
+            .then(response => {
+                let arr = [];
+                response.forEach(doc => {
+                    arr.push({id: doc.id, data: doc.data()})
+                })
 
-    const promesaProductos = new Promise((resolve, reject) => {
-        setTimeout(() => resolve(listaProductos), 500);
-    });
+                setProductos(arr);
+            })
+        }
+    }, [category_name]);
 
 
-    const llamadoProductos = () => {
-        promesaProductos.then((respuesta) => {
-            const productosPorCategoria = respuesta.filter(
-                (producto) => producto.categoria == category_name
-            );
-            setProductos(productosPorCategoria);
-        });
-    };
-
-    useEffect(() => llamadoProductos(), [category_name]);
-   
     return productos.length > 0 ? (
         <section className="categorias">
   
@@ -36,14 +32,14 @@ function Category() {
                 {
                     
                     
-                    productos.map((item, index) => (
-                        <li key={index}>
+                    productos.map((item) => (
+                        <li key={item.id}>
                             <ProductCard 
-                                nombre={item.nombre} 
-                                precio={item.precio} 
-                                stock={item.stock}
-                                foto={item.foto}
-                                itemid={item.id}
+                                nombre={item.data.nombre} 
+                                precio={item.data.precio} 
+                                stock={item.data.stock}
+                                foto={item.data.foto}
+                                itemid={item.data.id}
                             />
                         </li>
                     ))

@@ -13,23 +13,6 @@ const ItemDetail = ({item}) => {
   
     
 
-    const handleClickResta = () => {
-        if(qty > 0) {
-            setQty(qty - 1);
-        }
-    };       
- 
-    const onAdd = () => {
-        
-        setData({
-            ...data, 
-            cantTotal: data.cantTotal + qty,
-            cartItems:[...data.cartItems, item],
-        
-        })
-           
-        setShowItemCount(false); 
-    }
 
     const addMore = () => {
        const isInCart = data.cartItems.filter(i => i.id === item.id)
@@ -57,7 +40,6 @@ const ItemDetail = ({item}) => {
     console.log(data);
 
    
-    
     
 
 

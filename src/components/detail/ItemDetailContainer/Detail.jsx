@@ -1,37 +1,40 @@
 import {useEffect, useState} from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import {useParams} from 'react-router-dom';
-import {listaProductos} from '../../assets/listaProductos'; 
-import { useContext} from 'react'; 
+import { getFirestore } from '../../../db';
 
 
 const Detail = () => {
     const {itemid} = useParams();
+    const [product, setProduct] = useState(null);
+    const db = getFirestore();
+
+    useEffect(() => {
+        db.collection('productos').doc(itemid).get()
+        .then(doc => {
+            if(doc.exists) {
+                setProduct(doc.data());
+            }
+        })
+        .catch(e => console.log(e));
+
+        // db.collection('productos').doc(id)
+        // .onSnapshot(function(doc) {
+        //     setProduct(doc.data());
+        // });
+    }, []);
+    console.log(itemid);
+    
    
-    const [items, setItems] = useState();
-    
-    
-    const getItems = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const productoClickeado = listaProductos.find( item => item.id == itemid)
-            resolve(productoClickeado)
-        }, 600);
-    });
 
-    const llamadoProducto = () => {
-        getItems.then((respuesta) => setItems(respuesta))
-    }
-
-    useEffect(() => llamadoProducto()
-    // eslint-disable-next-line
-    , []);
+    console.log(product)
 
     return (
         <>
             {
-                items ?
+                product ?
                 <div>
-                    <ItemDetail item={items} />
+                    <ItemDetail item={product} />
 
                     
                 </div> : 
