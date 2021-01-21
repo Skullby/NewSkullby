@@ -1,23 +1,28 @@
 import { Store } from '../../Contexts/Store'; 
-import {useContext} from 'react'; 
+import {useContext, useState} from 'react'; 
 import {NavLink} from 'react-router-dom';
+import './Cart.css'; 
 
 function Cart() {
-
     const [data, setData] = useContext(Store);
 
+
+  
     const removeAllItems = () => {
         setData({
             cartItems:[],
             cantTotal: 0,
+            precioTotal:0,
         })
     }
 
     const removeItem = () => {
        
         setData({
+            cartItems: data.cartItems.splice([data.cartItems.findIndex(i => i.id === data.cartItems.id)]),
             cantTotal: data.cantTotal - (data.cartItems[data.cartItems.findIndex(i => i.id === data.cartItems.id)]?.itemQty),
-            cartItems: data.cartItems.splice([data.cartItems.findIndex(i => i.id === data.cartItems.id)])})
+            
+        })
     }
 
    
@@ -29,11 +34,21 @@ function Cart() {
             <h2>Sus productos:</h2>
 
             {
-                data.cartItems?.map(item => <p>{item.nombre} x {item.itemQty}
-                <button onClick={removeItem}>Quitar</button></p>) 
+                data.cartItems.map(item =>  
+                <li>
+                    <img  className="cartImg" src={item.foto} alt={item.nombre}></img>
+                    <div>
+                        <h2>{item.nombre}</h2>
+                        <p>Cantidad: {item.itemQty}</p>
+                        <p>Precio por unidad: <strong>${item.precio}</strong></p>
+                        <button onClick={removeItem}>Quitar</button>
+
+                    </div>
+                </li>  
+                ) 
             }
 
-            <p>Total: $ {data.cartItems.reduce((a, c) => a + c.precio * c.itemQty, 0)}</p>
+            <p>Total: $ {data.precioTotal}</p>
 
             <button onClick={removeAllItems} >Quitar todos los productos del Cart</button>
             <NavLink to='/checkout' activeClassName="cLink">Ir al Checkout</NavLink>

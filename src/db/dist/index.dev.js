@@ -13,7 +13,7 @@ require("@firebase/firestore");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var app = _app["default"].initializeApp({
-  apiKey: "AIzaSyCJnWk_K7J3KpAFdInaV-asun2SQsLTTLw",
+  apiKey: process.env.API_KEY,
   authDomain: "skullby-47415.firebaseapp.com",
   projectId: "skullby-47415",
   storageBucket: "skullby-47415.appspot.com",

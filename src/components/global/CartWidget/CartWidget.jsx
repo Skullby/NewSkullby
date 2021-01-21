@@ -12,6 +12,7 @@ const CartWidget = ({show, action}) => {
         setData({
             cartItems:[],
             cantTotal: 0,
+            precioTotal:0
         })
     }
 
@@ -44,7 +45,7 @@ const CartWidget = ({show, action}) => {
                 <button onClick={removeItem}>Quitar</button></p>) 
             }
 
-            <p>Total: $ {data.cartItems.reduce((a, c) => a + c.precio * c.itemQty, 0)}</p>
+            <p>Total: $ {data.precioTotal}</p>
 
            
             <button onClick={removeAllItems} >Quitar todos los productos del Cart</button>

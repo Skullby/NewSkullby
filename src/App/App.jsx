@@ -15,6 +15,7 @@ function App() {
   const [data, setData] = useState({
     cartItems:[],
     cantTotal:0,
+    precioTotal:0,
 
   });
 

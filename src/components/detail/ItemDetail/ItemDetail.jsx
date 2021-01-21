@@ -20,7 +20,9 @@ const ItemDetail = ({item}) => {
             data.cartItems[data.cartItems.findIndex(i => i.id === item.id)].itemQty++
             setData({
                 ...data,
-                cantTotal: data.cantTotal + qty
+                cantTotal: data.cantTotal + qty,
+                precioTotal: data.precioTotal + item.precio
+                
             })
         }else {
             
@@ -28,7 +30,7 @@ const ItemDetail = ({item}) => {
                 ...data, 
                 cantTotal: data.cantTotal + qty,
                 cartItems:[...data.cartItems, item],
-            
+                precioTotal: data.precioTotal + item.precio
             })
              
             setShowItemCount(false); 
